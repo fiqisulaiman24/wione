@@ -1,0 +1,1020 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+
+:root{
+    --wione-first-color: #203239;
+    --wione-second-color: #141E27;
+    --wione-third-color: #E0DDAA;
+    --wione-fourth-color: #EEEDDE;
+    --wione-primary-font: 'Redressed';
+    --wione-secondary-font: 'Nunito';
+}
+
+*,
+*:before,
+*:after,
+*:fullscreen,
+*:-ms-fullscreen,
+*:-webkit-full-screen,
+*:-moz-full-screen {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0 !important;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--wione-primary-font);
+    margin: 0;
+}
+
+p{
+    font-family: var(--wione-secondary-font);
+    margin: 0;
+}
+
+.section{
+    padding: 3.5rem 1.5rem;
+}
+
+.button.wione_primary_button{
+    font-family: var(--wione-secondary-font);
+    background: var(--wione-first-color);
+    color: var(--wione-third-color);
+    border-radius: 50em;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .50s all;
+    text-decoration: none;
+}
+
+.button.wione_primary_button:hover{
+    background: var(--wione-fourth-color);
+    color: var(--wione-first-color);
+    border:1px solid var(--wione-third-color);
+    transform: scale(1.1);
+}
+
+.button.wione_secondary_button{
+    font-family: var(--wione-secondary-font);
+    background: var(--wione-third-color);
+    color: var(--wione-first-color);
+    border-radius: 50em;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .50s all;
+    text-decoration: none;
+}
+
+.button.wione_secondary_button:hover{
+    background: var(--wione-fourth-color);
+    color: var(--wione-first-color);
+    border:1px solid var(--wione-third-color);
+    transform: scale(1.1);
+}
+
+.wione_section_title{
+    color:var(--wione-third-color);
+    font-size: 48px;
+    line-height: 52px;
+}
+
+.wione_section_subtitle{
+    color: var(--wione-third-color);
+    font-size: 14px;
+    line-height: 26px; 
+}
+
+.navbar-end .navbar-item,.navbar-link{
+    font-family: var(--wione-secondary-font);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--wione-third-color)
+}
+
+/* 
+    Start Bootstrap Modal to Pre loader
+*/
+.wione_open_modal{
+    background: url('../images/bg_hero_01.jpg') !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.wione_open_modal:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 30, 39, 1);
+}
+
+.wione_modal_content.modal-content{
+    background-color: var(--wione-third-color);
+    width: 80%;
+    margin: auto;
+    border: 1px solid var(--wione-third-color);
+    border-radius: 6px;
+}
+
+.wione_modal_headline{
+    font-family: var(--wione-primary-font);
+    font-size: 32px;
+    margin: 0;
+    color: var(--wione-first-color);
+}
+
+.wione_modal_headline span{
+    font-family: auto;
+}
+
+.wione_modal_tagline{
+    font-family: var(--wione-secondary-font);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--wione-first-color);
+}
+
+.wione_img_modal{
+    width: 102px;
+    margin: 4px auto;
+    filter: invert(15%) sepia(16%) saturate(1094%) hue-rotate(151deg) brightness(100%) contrast(91%);
+}
+
+.btn_wione_open_modal{
+    background: var(--wione-first-color);
+    color: var(--wione-third-color);
+    transition: .50s all;
+    font-family: var(--wione-secondary-font);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 21px 0;
+    border-radius: 6px;
+    border: 1px solid var(--wione-third-color);
+    display: flex;
+}
+
+.btn_wione_open_modal:hover{
+    background: var(--wione-fourth-color);
+    color: var(--wione-first-color);
+    border: 1px solid var(--wione-third-color);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+.modal.fade .modal-dialog {
+    transition: none;
+}
+}
+.modal.show .modal-dialog {
+    transform: none;
+}
+.modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+}
+
+.modal-dialog-scrollable {
+    height: calc(100% - 1rem);
+}
+.modal-dialog-scrollable .modal-content {
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-clip: padding-box;
+    outline: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+.modal-header .btn-close {
+    padding: 0.5rem 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+}
+.modal-footer > * {
+    margin: 0.25rem;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+
+    .modal-dialog-scrollable {
+        height: calc(100% - 3.5rem);
+    }
+
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+
+    .modal-sm {
+        max-width: 300px;
+    }
+}
+/* End Bootstrap Modal to Pre loader */
+
+/*
+    Hero Section
+*/
+.wione_hero{
+    background-image: url('../images/bg_hero_01.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+.wione_hero .hero-head,.hero-body,.hero-foot{
+    background: rgba(32, 50, 57, .85);
+}
+
+.hero-foot{
+    position: relative;
+}
+
+.wione_patternimage_title{
+    margin-bottom: 16px;
+}
+
+.wione_pattern_imageinvert{
+    filter: invert(1);
+}
+
+.wione_hero_wrapper{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.wione_tagline{
+    font-family: var(--wione-primary-font);
+    font-size: 34px;
+    color: var(--wione-third-color);
+    margin: 0;
+}
+
+.wione_hero_headline{
+    font-size: 152px;
+    color: var(--wione-third-color);
+    line-height: 150px;
+    margin: 0;
+}
+
+.wione_date{
+    font-family: var(--wione-secondary-font);
+    font-size: 18px;
+    color: var(--wione-third-color);
+    margin: 0;
+    letter-spacing:1px;
+    text-transform: uppercase;
+}
+
+.wione_date span{
+    font-family: var(--wione-primary-font);
+    position: relative;
+    top: 8px;
+    font-size: 28px;
+}
+
+.scroll-down {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    bottom: 110px;
+    height: 50px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 30px;
+}
+.scroll-down::before {
+    animation: scrollDownAnimation 2s infinite;
+    background-color: var(--wione-third-color);
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 6px;
+}
+@-moz-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@-o-keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes scrollDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*
+    End Hero Section
+*/
+
+/* Start Prevention Section */
+.wione_prevention_section{
+    background-color: var(--wione-third-color);
+}
+
+.wione_protocol_covid{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 2px 0;
+    position: relative;
+}
+
+.wione_protocol_covid:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 1px;
+    width: 114px;
+    background: var(--wione-second-color);
+}
+/* End Prevention Section */
+
+/* Start Surah Section */
+.wione_surah_section{
+    background: var(--wione-second-color);
+}
+.lotus_icon{
+    width: 58px;
+    filter:invert(92%) sepia(32%) saturate(318%) hue-rotate(1deg) brightness(94%) contrast(87%);
+}
+
+.wione_surah_translate{
+    color: var(--wione-third-color);
+    font-size:14px;
+    line-height: 28px;
+    margin: 14px 0;
+}
+
+.wione_surah_name{
+    color: var(--wione-third-color);
+    font-size: 14px;
+
+}
+
+/* 
+    Mempelai Section
+*/
+.wione_mempelai_section{
+    background-color: var(--wione-first-color);
+}
+
+.wione_greeting_text{
+    color: var(--wione-third-color);
+    font-style: italic;
+    font-size: 14px;
+    margin: 14px 0;
+}
+
+.wione_couple_content{
+    margin-top: 34px;
+    display: grid;
+    gap: 4px;
+}
+
+.wione_couple_photo{
+    transform: scale(1.8);
+}
+
+.wione_couple_divider{
+    font-size: 62px;
+    font-family: auto;
+    font-weight: 700;
+    line-height: auto;
+    color: var(--wione-third-color);
+}
+
+.wione_fullname_couple{
+    margin: 14px;
+    color: var(--wione-third-color);
+    font-size: 30px;
+    font-style: oblique;
+}
+
+.wione_couple_parents{
+    color: var(--wione-fourth-color);
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.wione_couple_socmed{
+    display: flex;
+    justify-content: center;
+}
+
+.wione_couple_socmed a{
+    margin: 0 8px;
+    background: var(--wione-second-color);
+    color: var(--wione-third-color);
+    width: 32px;
+    padding: 4px 6px;
+    border-radius: 8px;
+    transition: .50s all;
+}
+
+.wione_couple_socmed a:hover{
+    background: var(--wione-third-color);
+    color: var(--wione-first-color);
+    transform: scale(1.1);
+}
+/* 
+    End Mempelai Section
+*/
+
+/* 
+    Start Acara
+*/
+
+.wione_acara_section{
+    background: var(--wione-third-color);
+}
+
+.wione_acara_title,.wione_acara_subtitle{
+    color: var(--wione-first-color);
+}
+
+.wione_acara_subtitle{
+    font-size: 14px;
+}
+
+.wione_acara_divider{
+    width: 300px;
+    filter: invert(13%) sepia(12%) saturate(2013%) hue-rotate(152deg) brightness(87%) contrast(84%);
+}
+
+.wione_acara_name{
+    font-size: 36px;
+    color: var(--wione-first-color);
+}
+
+.wione_acara_time{
+    font-weight: 600;
+    color: var(--wione-first-color);
+    margin-bottom: 4px;
+}
+
+.wione_acara_locationname{
+    font-weight: 500;
+    color: var(--wione-first-color);
+    margin-bottom: 4px;
+    line-height: 26px;
+}
+
+.wione_datetimeday{
+    font-family: var(--wione-primary-font);
+    font-size: 26px;
+    color: var(--wione-first-color);
+    line-height: 20px;
+}
+
+.wione_savethedate{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--wione-first-color);
+}
+
+.wione_savedate_section{
+    background: var(--wione-second-color);
+}
+
+.level.is-mobile .level-item:not(:last-child){
+    margin-right: 0;
+}
+
+.wione_ctd_wrapper{
+    padding: 8px;
+    width: 72px;
+    background: var(--wione-first-color);
+    border-radius: 8px;
+}
+
+.wione__1__day,.wione__1__hour,
+.wione__1__minute,.wione__1__second{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--wione-third-color);
+}
+
+.wione_count{
+    color: var(--wione-third-color);
+    font-size: 28px;
+}
+/* 
+    End Acara
+*/
+
+/* 
+    Start Kisah Section
+*/
+
+.wione_kisah_section{
+    background: var(--wione-first-color);
+}
+
+.timeline .timeline-item .timeline-marker{
+    top: 2.2rem;
+    height: 32px;
+    width: 32px;
+}
+
+.timeline .timeline-item .timeline-marker.is-icon{
+    height: 32px;
+    width: 32px;
+    background: var(--wione-third-color);
+    border: 1px solid var(--wione-third-color);
+}
+
+.timeline .timeline-item .timeline-marker.is-icon>*{
+    font-size: 1rem !important;
+    color: var(--wione-second-color);
+}
+
+.timeline .timeline-item .timeline-content{
+    padding: 1.85em 0 0 2em;
+}
+
+.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-content{
+    padding: 1.9em 2em 0 0;
+}
+
+.wione_timeline_tag{
+    font-family: var(--wione-secondary-font);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--wione-first-color) !important;
+    background: var(--wione-third-color) !important;
+}
+
+.wione_kisah_date,.wione_kisah_description{
+    margin: 0;
+    font-size: 14px;
+    color: var(--wione-third-color);
+}
+/* 
+    End Kisah Section
+*/
+
+/*
+    Start Gallery Section
+*/
+.wione_gallery_section{
+    background: var(--wione-third-color);
+}
+
+.wione_gallery_columns .column{
+    padding: 0;
+}
+
+.wione_gallery_columns .column figure{
+    margin: 0 0 .65em;
+}
+
+.wione_gallery_columns .column.is-3{
+	overflow:hidden;
+}
+
+.wione_gallery_img {
+    transition: .50s all;
+    cursor: pointer;
+}
+
+.wione_gallery_img:hover {
+    transform: scale(1.1);
+}
+/* 
+    End Gallery Section
+*/
+
+/* 
+    Start Buku Tamu Section
+*/
+.input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea,
+.select select.is-active, .select select.is-focused, .select select:active,
+.select select:focus, .textarea:active, .textarea:focus{
+    border: 1px solid var(--wione-first-color);
+    box-shadow: none;
+}
+
+.wione_bukutamu_section{
+    background: var(--wione-first-color);
+}
+
+.box.wione_box_bukutamu{
+    background: var(--wione-third-color);
+    padding: 4px;
+}
+
+.wione_bukutamu_label{
+    font-family: var(--wione-secondary-font);
+}
+
+::placeholder{
+    font-family: var(--wione-secondary-font);
+    color: var(--wione-first-color) !important;
+    font-size: 14px;
+}
+
+.input, .textarea{
+    box-shadow: none;
+    background-color: var(--wione-fourth-color);
+    transition: .50s all;
+}
+
+.file-cta, .file-name, .input, .pagination-ellipsis,
+.pagination-link, .pagination-next, .pagination-previous,
+.select select, .textarea{
+    height: 2.6em;
+}
+
+.wione_box_komentartamu_title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wione_box_komentartamu{
+    padding: 4px;
+    height: 380px;
+    background: var(--wione-third-color);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.wione_box_komentartamu_wrapper{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--wione-fourth-color);
+}
+
+.wione_detail_komentartamu{
+    margin-left: 12px;
+}
+
+.wione_nama_komentartamu,.wione_isi_komentartamu{
+    font-size: 14px;
+    margin: 0;
+}
+
+.wione_nama_komentartamu{
+    font-weight: 600;
+    color: var(--wione-first-color);
+    margin-bottom: 4px;
+}
+
+/* Chrome */
+.wione_box_komentartamu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.wione_box_komentartamu::-webkit-scrollbar-track {
+    background-color: var(--wione-second-color);
+    border-radius: 15px;
+}
+
+.wione_box_komentartamu::-webkit-scrollbar-thumb {
+  background-color: var(--wione-fourth-color); 
+  border-radius: 4px;
+}
+
+.wione_box_komentartamu::-webkit-scrollbar-thumb:hover {
+  background: var(--wione-fourth-color); 
+}
+
+/* IE */
+.wione_box_komentartamu {
+  scrollbar-face-color: var(--wione-fourth-color); 
+  scrollbar-shadow-color: var(--wione-fourth-color); 
+  scrollbar-highlight-color: var(--wione-fourth-color);
+}
+
+/* FireFox */
+.wione_box_komentartamu {
+  scrollbar-color: var(--wione-fourth-color) var(--wione-fourth-color);
+  scrollbar-width: thin;
+}
+/* 
+    End Buku Tamu Section
+*/
+
+/* 
+    Start FOoter
+*/
+.footer.wione_footer_section{
+    background-color: var(--wione-first-color);
+    padding: 1rem 0rem 6.5rem;
+}
+
+.wione_footer_title{
+    font-family: var(--wione-secondary-font);
+    font-weight: 600;
+    font-size:14px;
+    color: var(--wione-third-color);
+}
+/* 
+    End Footer
+*/
+
+/* Start Floating Button Kirim Hadiah */
+.wione_send_gift_btn{
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, -50%);
+    padding: 4px 14px;
+    background-color:var(--wione-second-color);
+    color: var(--wione-third-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-family: var(--wione-secondary-font);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.my-float{
+    margin-right: 8px;
+}
+
+.wione_hadiah_modal.modal{
+    background: rgba(20, 30, 39, .70);
+}
+
+.wione_hadiah_modal_content.modal-content{
+    background-color: var(--wione-third-color);
+    width: 90%;
+    margin: auto;
+    border: 1px solid var(--wione-third-color);
+    border-radius: 6px;
+}
+
+.wione_modalhadiah_title{
+    font-family: var(--wione-secondary-font);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.wione_hadiah_content{
+    border-bottom: 1px solid var(--wione-fourth-color);
+    margin-bottom: 14px;
+}
+
+.wione_payment_name,.wione_payment_owner{
+    font-family: var(--wione-secondary-font);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wione_payment_owner{
+    margin-bottom: 6px;
+}
+
+.wione_copyclipboard{
+    color: var(--wione-second-color);
+}
+/* End Floating Button Kirim Hadiah */
+
+/* Start Bottom Navigation */
+/* Bottom Nav */
+.tabbar-wrapper{
+    position: fixed;
+    left: 50%;
+    bottom: -30px;
+    transform: translate(-50%, -50%);
+}
+
+.tabbar-1 {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: var(--wione-fourth-color);
+    border-radius: 50px;
+    padding: 1rem;
+    transition: 0.5s all;
+}
+.tabbar-1-item {
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+    color: var(--wione-first-color);
+    transition: 0.5s all;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.tabbar-1-item:hover{
+    color: var(--wione-first-color);
+}
+
+/* Scrollspy */
+.tabbar-1-item.active {
+    color: var(--wione-third-color);
+    border-radius: 50em;
+    background: var(--wione-first-color);
+    padding: 6px 10px;
+    transition: .50s all;
+    border: 0;
+}
+/* End Bottom Navigation */
+
+/* Audioplayer */
+#player-container #play-pause {
+    cursor: pointer;
+    text-indent: -999999px;
+    height:40px;
+    width: 40px;
+    border-radius: 50em;
+    z-index: 2;
+    background-image: url('../images/playpause.png');
+    background-repeat: no-repeat!important;
+    background-position: center;
+    background-size: 16px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:20px;
+    background-color: var(--wione-fourth-color);
+    position: fixed;
+    right: 12px;
+    bottom: 54px;
+    transform: scale(.9);
+  }
+/* For Mobile */
+@media (max-width:768px){
+    .wione_hero_wrapper{
+        margin-bottom: 62px;
+    }
+    .wione_hero_headline{
+        font-size: 104px;
+        line-height: 116px;
+    }
+    .wione_section_title{
+        font-size: 36px;
+    }
+    /**/
+    .wione_acara_name{
+        font-size: 32px;
+    }
+    .wione_datetimeday{
+        font-size: 24px;
+    }
+
+}
